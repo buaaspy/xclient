@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xclient"
+  id="myeclipse.1413098907008"
+  context-root="/xclient"
+  j2ee-spec="5.0"
+  archive="xclient.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,67 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- A minimal Flowplayer setup to get you started -->
+  
+
+	<!-- 
+		include flowplayer JavaScript file that does  
+		Flash embedding and provides the Flowplayer API.
+	-->
+	<script type="text/javascript" src="flowplayer-3.2.6.min.js"></script>
+	
+	<!-- some minimal styling, can be removed -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!-- page title -->
+	<title>Minimal Flowplayer setup</title>
+
+</head><body>
+
+	<div id="page">
+		
+		<!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+		<a  
+			 href="http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv"
+			 style="display:block;width:520px;height:330px"  
+			 id="player"> 
+		</a> 
+	
+		<!-- this will install flowplayer inside previous A- tag. -->
+		<script> 
+			flowplayer("player", "../flowplayer-3.2.7.swf", { 
+				clip: { 
+					provider: 'rtmp', 
+					live: false, 
+					autoBuffering: true, //是否自动缓冲视频，默认true 
+					autoPlay: true, 
+					url: "test.flv", //此处为播放文件名，可由网站参数指定，视频文件位于前文提到的Red5根目录下webapps/oflaDemo/streams 
+				}, 
+				
+			
+				plugins: { 
+					rtmp: { 
+					url: "../flowplayer.rtmp-3.2.3.swf", 
+					netConnectionUrl: "rtmp://192.168.5.51/xserver", //此处IP地址为你的rtmp服务器IP地址 
+				}, 
+				
+				controls: { 
+					url: "../flowplayer.controls-3.2.5.swf", 
+					autoHide: 'always', 
+					play: true, 
+					scrubber: true, 
+					playlist: false, 
+					tooltips: { 
+						buttons: true, 
+						play: 'play', 
+						fullscreen: 'fullscreen', 
+						fullscreenExit: 'exit', 
+						pause: 'pause', 
+						mute: 'mute', 
+						unmute: 'unmute', 
+					} 
+				} 
+			} 
+		}); 
+		</script>
+	</div>	
+</body></html>
